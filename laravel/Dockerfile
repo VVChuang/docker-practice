@@ -14,9 +14,6 @@ RUN apt-get update -y && apt-get install -y zlib1g-dev git && apt-get clean && r
 # Install zip
 RUN docker-php-ext-install zip
 
-# Install laravel
-RUN composer global require "laravel/installer"
-
 COPY hello-world /var/www/html
 
 # Change Owner
